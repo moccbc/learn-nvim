@@ -1,0 +1,16 @@
+{
+  "name": "learn-nvim",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev --port 3000 ./content/",
+    "build": "vitepress build ./content/",
+    "preview": "vitepress preview ./content/"
+  },
+  "keywords": [],
+  "author": "Heiker (https://github.com/VonHeikemen)",
+  "devDependencies": {
+    "vitepress": "^1.5.0"
+  }
+}
