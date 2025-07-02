@@ -5,7 +5,7 @@ export default defineConfig({
   title: 'Learn nvim',
   description: 'Learn how to use Neovim and survive the experience',
   base: '/learn-nvim/',
-  outDir: '/output',
+  outDir: './output',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     search: {
@@ -18,7 +18,7 @@ export default defineConfig({
     sidebar: sidebar(),
 
     socialLinks: [
-      {icon: 'github', link: 'https://github.com/VonHeikemen'}
+      {icon: 'github', link: 'https://github.com/VonHeikemen/learn-nvim'}
     ]
   },
 });

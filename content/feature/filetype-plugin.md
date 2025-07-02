@@ -9,7 +9,7 @@ next: false
 
 A filetype plugin is a script that's executed after Neovim assigns a value to the `filetype` option. This is the place where you can enable language specific options.
 
-The concept is similar to a [global plugin](./feature/global-plugin) but in this case the script will be executed the first time we open a file, right after Neovim assigns a filetype to it.
+The concept is similar to a [global plugin](./global-plugin) but in this case the script will be executed the first time we open a file, right after Neovim assigns a filetype to it.
 
 ## The ftplugin directory
 
