@@ -28,7 +28,7 @@ vim.lsp.config('luals', {
 vim.lsp.enable('luals')
 ```
 
-For this to work [LuaLS](https://github.com/LuaLS/lua-language-server) needs to be installed. The latest version is available in [the github releases page](https://github.com/LuaLS/lua-language-server/releases/latest) and there is always the option to [build it from source](https://luals.github.io/wiki/build/).
+Is important to remember that the [vim.lsp](https://neovim.io/doc/user/lsp.html#LSP) module only works with [language servers](/feature/lsp-client#what-s-a-language-server). And in this example we are using [LuaLS](https://github.com/LuaLS/lua-language-server), a language server for [lua](/101/lua-intro). The latest version of LuaLS is available in [the github releases page](https://github.com/LuaLS/lua-language-server/releases/latest) and there is always the option to [build it from source](https://luals.github.io/wiki/build/).
 
 This snippet of code could be placed in the [init.lua](../101/from-vimscript-to-lua#the-entry-point) file or a [global plugin](./global-plugin). It just needs to be executed during Neovim's startup process, and it should run only once.
 
@@ -36,7 +36,7 @@ So, `vim.lsp.config()` is the function we use to define the configuration for a 
 
 But why two functions?
 
-Making the configuration and setup two separate steps makes it possible to create configurations per project. For example, if a language server needs special settings to work in a monorepo we could have two configurations for the same language server, one for standalone projects and one for monorepos. And then we can choose which one to use depending on the project we are working on.
+Making the configuration and setup two separate steps makes it possible to create configurations per project. For example, if a language server needs special settings to work in a monorepo we could have two configurations, one for standalone projects and one for monorepos. And then we can choose which one to use depending on the project we are working on.
 
 It also opens the door for third-party plugins. A plugin could create a configuration and we can decide when to enable it.
 
@@ -44,7 +44,7 @@ It also opens the door for third-party plugins. A plugin could create a configur
 
 `vim.lsp.config()` can be used to define a configuration for a language server or extend an existing configuration.
 
-This first argument should be a string. This will be the name we will provide to `vim.lsp.enable()`. The second argument is the configuration for the server. The available options are the same as `vim.lsp.start()` with a few extra fields.
+The first argument should be a string. This will be the name we will provide to `vim.lsp.enable()`. The second argument must be a [lua table](/101/lua-intro#lua-tables), this will be the configuration for the server. The available options are the same as [vim.lsp.start()](https://neovim.io/doc/user/lsp.html#vim.lsp.ClientConfig) with a few extra fields.
 
 This is the bare minimum we need to make a language server work:
 
@@ -56,7 +56,7 @@ This is the bare minimum we need to make a language server work:
 
 ## The lsp directory
 
-We also have the option to define a "default configuration" for a language server. These can be located in a directory called `lsp`.
+We also have the option to define a "default configuration" for a language server. These can be located anywhere in the [runtimepath](/feature/global-plugin#the-runtimepath), in a directory called `lsp`.
 
 Our personal Neovim configuration can have this structure:
 
