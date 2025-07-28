@@ -10,4 +10,5 @@ next: false
 * [LSP client](./lsp-client)
 * [LSP setup](./lsp-setup)
 * [Lua modules](./lua-modules)
+* [Treesitter](./treesitter)
 

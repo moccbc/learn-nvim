@@ -60,6 +60,7 @@ function sidebar() {
         {text: 'LSP client', link: '/feature/lsp-client'},
         {text: 'LSP setup', link: '/feature/lsp-setup'},
         {text: 'Lua modules', link: '/feature/lua-modules'},
+        {text: 'Treesitter', link: '/feature/treesitter'},
       ],
     }
   ];
