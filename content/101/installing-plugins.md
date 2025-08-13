@@ -2,7 +2,7 @@
 
 Here I want to show you how to install a plugin without a plugin manager.
 
-Vim and Neovim have a feature called [packages](https://neovim.io/doc/user/repeat.html#_using-vim-packages), and this is enough to install many plugins that are hosted on github.
+Vim and Neovim have a feature called [packages](https://neovim.io/doc/user/pack.html#_using-vim-packages), and this is enough to install many plugins that are hosted on github.
 
 ## Be aware
 
