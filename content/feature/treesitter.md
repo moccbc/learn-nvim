@@ -33,7 +33,7 @@ And this shows perfectly why treesitter is so hard to explain in simple words. T
 
 In Neovim's lua api we have access to a module called [vim.treesitter](https://neovim.io/doc/user/treesitter.html#_lua-module:-vim.treesitter) and this means any user with enough patience can start implementing features based on treesitter. This is what many plugins use internally. For example...
 
-[mini.snippets](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-snippets.md) (a module of [mini.nvim](https://github.com/echasnovski/mini.nvim)) can use treesitter to help provide context aware snippets. When setup correctly `mini.snippets` can use treesitter to figure out what is the language of the symbol under the cursor. Then it uses this information to search the user's personal snippet collection.
+[mini.snippets](https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-snippets.md) (a module of [mini.nvim](https://github.com/echasnovski/mini.nvim)) can use treesitter to help provide context aware snippets. When setup correctly `mini.snippets` can use treesitter to figure out what is the language of the symbol under the cursor. Then it uses this information to search the user's personal snippet collection.
 
 [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context) is another interesting plugin. It uses treesitter to figure out where you are in the current function and decide if it should display the context at the top of the window.
 

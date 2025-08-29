@@ -50,12 +50,12 @@ Inside `opt` or `start` is where we actually put the plugins we want to use.
 
 The only thing we need to install a plugin is `git` and knowing a valid path inside the `packpath`.
 
-Let's say we are on a Linux system and we want to download [mini.nvim](https://github.com/echasnovski/mini.nvim).
+Let's say we are on a Linux system and we want to download [mini.nvim](https://github.com/nvim-mini/mini.nvim).
 
 We can execute this command on a terminal.
 
 ```sh
-git clone https://github.com/echasnovski/mini.nvim \
+git clone https://github.com/nvim-mini/mini.nvim \
   ~/.config/nvim/pack/vendor/start/mini.nvim
 ```
 
