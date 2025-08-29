@@ -37,12 +37,13 @@ Since there is no way to tell for how long they will support older Neovim versio
 
 ## Versions
 
-Last updated: 2025-07-06
+Last updated: 2025-08-21
 
 These already dropped support for `v0.9`. So, newer versions will no longer work.
 
 | Plugin                        | Commit                                   |
 | ---                           | ---                                      |
+| cmp-nvim-lsp                  | a8912b88ce488f411177fc8aed358b04dc246d7b |
 | gitsigns.nvim                 | ee28ba3e70ecea811b8f6d7b51d81976e94b121c |
 | mason-lspconfig.nvim          | 1a31f824b9cd5bc6f342fc29e9a53b60d74af245 |
 | mason.nvim                    | fc98833b6da5de5a9c5b1446ac541577059555be |
@@ -57,7 +58,6 @@ Newer version of these plugins might still work in `v0.9`.
 | bufferline.nvim               | 655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3 |
 | cmp-buffer                    | b74fab3656eea9de20a9b8116afa3cfc4ec09657 |
 | cmp-mini-snippets             | 582aea215ce2e65b880e0d23585c20863fbb7604 |
-| cmp-nvim-lsp                  | a8912b88ce488f411177fc8aed358b04dc246d7b |
 | cmp-path                      | e52e640b7befd8113b3350f46e8cfcfe98fcf730 |
 | friendly-snippets             | 572f5660cf05f8cd8834e096d7b4c921ba18e175 |
 | lazy.nvim                     | 6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a |
