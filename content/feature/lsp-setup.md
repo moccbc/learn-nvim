@@ -136,3 +136,69 @@ Neovim will also try other features of language servers.
 
 * Diagnostics: This is the term Neovim uses for error and warning messages. Whenever possible Neovim will show errors in the current buffer. Things like missing semi-colon or type mismatch... that sort of thing.
 
+## About nvim-lspconfig
+
+[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) is a very popular plugin that has been around since 2019. And it is a big reason why `vim.lsp.enable()` and `vim.lsp.config()` were added to Neovim in 2025.
+
+The primary goal of this plugin is to store configurations for language servers. Right now in the year of 2025 is meant to be a "data only" repository. If you visit the github repository you'll notice it has an [lsp directory](https://github.com/neovim/nvim-lspconfig/tree/master/lsp) and inside there are 300+ configuration files. And now the question is...
+
+*How do we use this plugin?*
+
+99.9% of the time we just use `vim.lsp.enable()` and that's it.
+
+Let's say we have the plugin installed and we want to use [gopls](https://github.com/neovim/nvim-lspconfig/blob/aafecf5b8bc0a768f1a97e3a6d5441e64dee79f9/lsp/gopls.lua). The first step to make it work is to actually install the language server. Assuming you have the toolchain for the [go programming language](https://go.dev/), you can execute this command on the terminal.
+
+```sh
+go install golang.org/x/tools/gopls@latest
+```
+
+Then in our `init.lua` file we can call `vim.lsp.enable()`.
+
+```lua
+vim.lsp.enable('gopls')
+```
+
+Or, if we have an `init.vim` file as an entrypoint.
+
+```vim
+lua vim.lsp.enable('gopls')
+```
+
+Now every time we open a `go` file Neovim will use the language server.
+
+And that pretty much is the "modern workflow" with nvim-lspconfig. We install a supported language server and then call `vim.lsp.enable()` with the appropiate configuration name.
+
+### Is this plugin needed?
+
+Technically no.
+
+You can use nvim-lspconfig as a resource to learn how to configure a language server. Most configuration files in the `lsp` directory of nvim-lspconfig are self-contained, so you could copy the ones you need to your own personal configuration without installing the entire plugin.
+
+That said, I think you should ask yourself if you are willing to maintain the configuration files of the language servers you want to use. After you answer that you'll know if you want to install nvim-lspconfig.
+
+### The lspconfig module
+
+I mentioned nvim-lspconfig has been around since 2019 and that means there is a lot of content online that references the "old method" to configure language servers. You'll find stuff like this.
+
+```lua
+require('lspconfig').gopls.setup({})
+```
+
+This configuration method still works but it will be removed in the future.
+
+In nvim-lspconfig's documentation they call it "the framework." So the code inside the `lspconfig` module is very similar to `vim.lsp.enable()`. It creates an autocommand on the `FileType` event and calls `vim.lsp.start()` when needed.
+
+In a way "the framework" of nvim-lspconfig is now part of Neovim v0.11 but in the form of `vim.lsp.config()` and `vim.lsp.enable()`.
+
+Is worth mention the `.setup()` function of the `lspconfig` module uses a different set of configuration files. It reads from the [lua/lspconfig/configs](https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/configs) directory. These configurations are frozen, meaning no new configurations will be added. And the last update it had was on `August 2025`.
+
+*Is there a good reason to use one of these setup functions?*
+
+Yes. There are handful of [configurations that haven't been migrated to the lsp directory](https://github.com/neovim/nvim-lspconfig/issues/3705). If you need one of those language servers then you are kind of forced to use the `lspconfig` module.
+
+Also, if your Neovim version is below v0.11 then using the `lspconfig` module would be the easiest way to configure a language server.
+
+One last thing...
+
+It has always been possible to use Neovim's LSP client without plugins, even on older versions below v0.11. Is just that very few people were willing to learn how to do it. Plugins make things easier to use but they are not strictly necessary.
+
