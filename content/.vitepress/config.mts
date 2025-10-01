@@ -61,6 +61,7 @@ function sidebar() {
         {text: 'LSP setup', link: '/feature/lsp-setup'},
         {text: 'Lua modules', link: '/feature/lua-modules'},
         {text: 'Treesitter', link: '/feature/treesitter'},
+        {text: 'Colorscheme', link: '/feature/colorscheme'},
       ],
     }
   ];

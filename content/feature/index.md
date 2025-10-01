@@ -11,4 +11,5 @@ next: false
 * [LSP setup](./lsp-setup)
 * [Lua modules](./lua-modules)
 * [Treesitter](./treesitter)
+* [Colorscheme](./colorscheme)
 
