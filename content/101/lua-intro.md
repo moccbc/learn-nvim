@@ -274,7 +274,7 @@ For example, if you were to create your own `math` global variable, a lot of thi
 
 ## Meta tables
 
-This is an avanced topic that I wish I didn't have to mention but Neovim uses them in a few places. So here we are.
+This is an advanced topic that I wish I didn't have to mention but Neovim uses them in a few places. So here we are.
 
 A meta table is a lua table that redefines the behavior of certain operations. Let me show you one.
 
