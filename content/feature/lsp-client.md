@@ -109,6 +109,7 @@ grn    -> renames all references of the symbol under the cursor
 gra    -> shows a list of code actions available in the line under the cursor
 grr    -> lists all the references of the symbol under the cursor
 gri    -> lists all the implementations for the symbol under the cursor
+grt    -> jump to the definition of the type symbol under the cursor
 gO     -> lists all symbols in the current buffer
 ctrl-s -> in insert mode, displays the function signature under the cursor
 ```
@@ -125,6 +126,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
     bufmap('n', 'grr', '<cmd>lua vim.lsp.buf.references()<cr>')
     bufmap('n', 'gri', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+    bufmap('n', 'grt', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
     bufmap('n', 'grn', '<cmd>lua vim.lsp.buf.rename()<cr>')
     bufmap('n', 'gra', '<cmd>lua vim.lsp.buf.code_action()<cr>')
     bufmap('n', 'gO', '<cmd>lua vim.lsp.buf.document_symbol()<cr>')

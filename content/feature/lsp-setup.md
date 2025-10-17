@@ -123,6 +123,7 @@ grn        -> renames all references of the symbol under the cursor
 gra        -> list code actions available in the line under the cursor
 grr        -> lists all the references of the symbol under the cursor
 gri        -> lists all the implementations for the symbol under the cursor
+grt        -> jump to the definition of the type symbol under the cursor
 gO         -> lists all symbols in the current buffer
 ctrl-s     -> in insert mode, display function signature under the cursor
 [d         -> jump to previous diagnostic in the current buffer
@@ -200,5 +201,5 @@ Also, if your Neovim version is below v0.11 then using the `lspconfig` module wo
 
 One last thing...
 
-It has always been possible to use Neovim's LSP client without plugins, even on older versions below v0.11. Is just that very few people were willing to learn how to do it. Plugins make things easier to use but they are not strictly necessary.
+It has always been possible to use Neovim's LSP client without plugins, even on older versions below v0.11. Is just that very few people were willing to [learn how to do it](./lsp-client#start-the-client). Plugins make things easier to use but they are not strictly necessary.
 
