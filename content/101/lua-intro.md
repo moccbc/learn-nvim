@@ -313,7 +313,7 @@ But vim options are not implemented in lua. You are not going to find a lua tabl
 
 ## Syntax sugar
 
-Syntax sugar is when a programming language tries to be cute. Is like a short hand for something that is considered tedious. Here is an example.
+Syntax sugar is when a programming language tries to be cute. It's like a short hand for something that is considered tedious. Here is an example.
 
 ```lua
 local pieces = {
@@ -372,7 +372,7 @@ print_name 'Queen'
 
 These are valid function calls.
 
-We can omit the parenthesis if the function call only receives one argument, and that argument is a table or a string.
+We can omit the parentheses if the function call only receives one argument, and that argument is a table or a string.
 
 Keep in mind these exceptions do not apply to variables. The following code does not work:
 
