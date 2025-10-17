@@ -61,11 +61,11 @@ Newer version of these plugins might still work in `v0.9`.
 | cmp-path                      | c642487086dbd9a93160e1679a1327be111cbc25 |
 | friendly-snippets             | 572f5660cf05f8cd8834e096d7b4c921ba18e175 |
 | lazy.nvim                     | 6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a |
-| mini.nvim                     | ddb70da6ec6aa896cfde87350d1e8dffb57ddef0 |
+| mini.nvim                     | 79654ef28182986dcdd9e2d3506d1728fc7c4f79 |
 | nvim-cmp                      | b5311ab3ed9c846b585c0c15b7559be131ec4be9 |
 | nvim-ts-context-commentstring | 1b212c2eee76d787bbea6aa5e92a2b534e7b4f8f |
-| snacks.nvim                   | bc0630e43be5699bb94dadc302c0d21615421d93 |
-| tokyonight.nvim               | 057ef5d260c1931f1dffd0f052c685dcd14100a3 |
+| snacks.nvim                   | bfe8c26dbd83f7c4fbc222787552e29b4eccfcc0 |
+| tokyonight.nvim               | 4d159616aee17796c2c94d2f5f87d2ee1a3f67c7 |
 | vim-fugitive                  | 61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4 |
 | vim-repeat                    | 65846025c15494983dafe5e3b46c8f88ab2e9635 |
 
